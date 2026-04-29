@@ -1,0 +1,953 @@
+<!DOCTYPE html><html><head>
+      <title>report</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////Users/alanhsiu/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.8.24/crossnote/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-details{margin:0;padding:0;border:none}.markdown-preview .md-toc summary.md-toc-link-wrapper{cursor:pointer;list-style-position:outside}.markdown-preview .md-toc summary.md-toc-link-wrapper::marker{font-size:.85em}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='0']{margin-left:12px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='1']{margin-left:28px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='2']{margin-left:44px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='3']{margin-left:60px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='4']{margin-left:76px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='5']{margin-left:80px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-details{margin:0;padding:0;border:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='0']{padding-left:0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='1']{padding-left:16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='2']{padding-left:32px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='3']{padding-left:48px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='4']{padding-left:64px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='5']{padding-left:80px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script>
+    </head>
+    <body for="html-export">
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="part-2--google-network">Part 2 — Google+ Network </h1>
+<h2 id="q18-number-of-personal-networks">Q18: Number of Personal Networks </h2>
+<p>Among all 132 ego nodes that have a <code>.circles</code> file in the dataset, we keep only those that satisfy <strong>both</strong> of the following conditions:</p>
+<ol>
+<li>The ego node has <strong>more than 2 circles</strong> (strictly greater than 2).</li>
+<li>The ego node has a corresponding <code>.edges</code> file.</li>
+</ol>
+<p>After filtering, there are <strong>57 personal networks</strong>.</p>
+<hr>
+<h2 id="q19-in-degree-and-out-degree-distributions">Q19: In-degree and Out-degree Distributions </h2>
+<p>We build a directed personal network for each of the three specified ego nodes from the <code>.edges</code> file, which records directed edges among the ego node's contacts. Following the standard ego-network construction, the ego node itself is explicitly added to the graph with a directed edge from the ego node to every other node in the network (i.e., ego → neighbor for all neighbors). The basic statistics of the three networks are summarised below:</p>
+<table>
+<thead>
+<tr>
+<th>Ego Node</th>
+<th>Nodes</th>
+<th>Edges (directed)</th>
+<th>Avg In-degree</th>
+<th>Max In-degree</th>
+<th>Avg Out-degree</th>
+<th>Max Out-degree</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>109327480479767108490</code></td>
+<td>774</td>
+<td>10,884</td>
+<td>14.06</td>
+<td>91</td>
+<td>14.06</td>
+<td>773</td>
+</tr>
+<tr>
+<td><code>115625564993990145546</code></td>
+<td>924</td>
+<td>40,323</td>
+<td>43.64</td>
+<td>234</td>
+<td>43.64</td>
+<td>923</td>
+</tr>
+<tr>
+<td><code>101373961279443806744</code></td>
+<td>3,815</td>
+<td>1,137,321</td>
+<td>298.12</td>
+<td>1,826</td>
+<td>298.12</td>
+<td>3,814</td>
+</tr>
+</tbody>
+</table>
+<p>Note: The average in-degree always equals the average out-degree by the directed graph identity <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∑</mo><mi>v</mi></msub><msup><mrow><mi>deg</mi><mo>⁡</mo></mrow><mo>+</mo></msup><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo><mo>=</mo><msub><mo>∑</mo><mi>v</mi></msub><msup><mrow><mi>deg</mi><mo>⁡</mo></mrow><mo>−</mo></msup><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo><mo>=</mo><mi mathvariant="normal">∣</mi><mi>E</mi><mi mathvariant="normal">∣</mi></mrow><annotation encoding="application/x-tex">\sum_v \deg^+(v) = \sum_v \deg^-(v) = |E|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1554em;vertical-align:-0.2997em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.0017em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.0359em;">v</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2997em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop"><span class="mop">de<span style="margin-right:0.0139em;">g</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8557em;"><span style="top:-3.1473em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">+</span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0359em;">v</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1554em;vertical-align:-0.2997em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.0017em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.0359em;">v</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2997em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop"><span class="mop">de<span style="margin-right:0.0139em;">g</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8557em;"><span style="top:-3.1473em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">−</span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0359em;">v</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.0576em;">E</span><span class="mord">∣</span></span></span></span>. The maximum out-degree equals <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">N - 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.109em;">N</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> in each case, corresponding to the ego node which connects to every other node.</p>
+<h3 id="ego-node-109327480479767108490">Ego node <code>109327480479767108490</code> </h3>
+<p><img src="images/q19_109327480479767108490_indegree.png" alt="In-degree distribution"><br>
+<img src="images/q19_109327480479767108490_outdegree.png" alt="Out-degree distribution"></p>
+<h3 id="ego-node-115625564993990145546">Ego node <code>115625564993990145546</code> </h3>
+<p><img src="images/q19_115625564993990145546_indegree.png" alt="In-degree distribution"><br>
+<img src="images/q19_115625564993990145546_outdegree.png" alt="Out-degree distribution"></p>
+<h3 id="ego-node-101373961279443806744">Ego node <code>101373961279443806744</code> </h3>
+<p><img src="images/q19_101373961279443806744_indegree.png" alt="In-degree distribution"><br>
+<img src="images/q19_101373961279443806744_outdegree.png" alt="Out-degree distribution"></p>
+<h3 id="do-the-personal-networks-have-a-similar-in-degree-and-out-degree-distribution">Do the personal networks have a similar in-degree and out-degree distribution? </h3>
+<p><strong>No.</strong> Although the average in-degree and average out-degree are numerically equal for each network (a basic identity of directed graphs), their <em>distributions</em> are structurally very different within each network and across networks.</p>
+<p><strong>In-degree</strong> shows a right-skewed, heavy-tailed distribution in all three networks: most nodes receive very few incoming edges, while a small number of highly-followed nodes have much higher in-degrees. For <code>…108490</code>, the distribution peaks around degree 5–20 and tapers off to a maximum of 91. For <code>…145546</code>, it is more spread out with a right tail reaching 234. The largest network, <code>…806744</code>, has the widest spread, with in-degrees extending to 1,826, consistent with a heavier-tailed distribution driven by a large and diverse follower base.</p>
+<p><strong>Out-degree</strong> is also right-skewed but exhibits a distinctly different shape. The overwhelming majority of nodes have very low out-degrees (close to 0), producing an extreme spike at the left end of the linear-scale plot. The distribution then has an extremely long, flat tail. The dominant outlier in each network is the ego node itself, whose out-degree equals <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">N - 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.109em;">N</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> (773, 923, and 3,814 respectively), placing it far to the right of all other nodes. This makes the linear-scale out-degree plot appear as a single tall bar near zero with one isolated point at the far right.</p>
+<p>In summary, the in-degree and out-degree distributions are <strong>not similar</strong> within any individual network. In-degree is more broadly distributed across mid-range values with a gradual heavy tail, while out-degree is extremely concentrated near zero with one dominant hub (the ego node). This asymmetry reflects the structural role of the ego node in the personal network construction and the natural variation in how actively users follow others.</p>
+<hr>
+<h2 id="q20-walktrap-community-detection">Q20: Walktrap Community Detection </h2>
+<p>For each of the three personal networks from Q19, we apply the <strong>Walktrap</strong> community detection algorithm (random walk length = 4 steps). Since Walktrap requires an undirected graph, each directed personal network is first converted to its undirected counterpart by ignoring edge directions and collapsing parallel edges.</p>
+<h3 id="results-summary">Results Summary </h3>
+<table>
+<thead>
+<tr>
+<th>Ego Node</th>
+<th>Nodes</th>
+<th>Edges (undirected)</th>
+<th># Communities</th>
+<th>Modularity</th>
+<th>Top Community Sizes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>109327480479767108490</code></td>
+<td>774</td>
+<td>9,843</td>
+<td>3</td>
+<td>0.2282</td>
+<td>419, 279, 76</td>
+</tr>
+<tr>
+<td><code>115625564993990145546</code></td>
+<td>924</td>
+<td>34,945</td>
+<td>9</td>
+<td>0.2985</td>
+<td>335, 280, 230, 43, 31, …</td>
+</tr>
+<tr>
+<td><code>101373961279443806744</code></td>
+<td>3,815</td>
+<td>958,395</td>
+<td>18</td>
+<td>0.1772</td>
+<td>2,920, 879, 1, 1, …</td>
+</tr>
+</tbody>
+</table>
+<h3 id="community-structure-plots">Community Structure Plots </h3>
+<p><strong>Ego node <code>109327480479767108490</code></strong> (3 communities, modularity = 0.2282)</p>
+<p><img src="images/q20_109327480479767108490_walktrap.png" alt="Walktrap community structure"></p>
+<p>The three communities are visually well-separated in the force-directed layout. The two dominant communities (419 and 279 nodes) occupy the left and right halves of the graph respectively, while the smallest community (76 nodes) forms a distinct sub-cluster in the upper region. This clear spatial separation is consistent with the moderate modularity score of 0.2282, indicating genuine but not sharply defined community boundaries.</p>
+<p><strong>Ego node <code>115625564993990145546</code></strong> (9 communities, modularity = 0.2985)</p>
+<p><img src="images/q20_115625564993990145546_walktrap.png" alt="Walktrap community structure"></p>
+<p>The layout reveals a densely connected core where the three largest communities (335, 280, and 230 nodes) are interleaved, surrounded by smaller peripheral groups visible as scattered coloured nodes. The highest modularity (0.2985) among the three networks reflects genuine subgroup structure. The three roughly equal-sized dominant communities suggest a balanced partitioning of the social network, while the smaller peripheral communities likely correspond to users who bridge between groups.</p>
+<p><strong>Ego node <code>101373961279443806744</code></strong> (18 communities, modularity = 0.1772)</p>
+<p><img src="images/q20_101373961279443806744_walktrap.png" alt="Walktrap community structure"></p>
+<p>The network is extremely dense (958,395 undirected edges; average degree ≈ 502), and the visualisation appears as an almost entirely uniform mass. This is not a visualisation artifact but a direct consequence of the community structure: Community 1 alone contains 2,920 of 3,815 nodes (76.5%), and Community 2 contains 879 (23%). The remaining 16 communities are all singletons, whose coloured points are invisible at this scale. The low modularity (0.1772) confirms that community boundaries are weak when the graph is near-complete.</p>
+<h3 id="are-the-modularity-scores-similar">Are the modularity scores similar? </h3>
+<p><strong>No.</strong> The scores range from 0.1772 to 0.2985, a spread of approximately 0.12. The primary driver of this variation is <strong>network density</strong>: <code>…806744</code> has an average undirected degree of ≈ 502 compared to ≈ 25 and ≈ 76 for the other two. In a near-complete graph, random walks mix rapidly across the entire network, making it very difficult for the algorithm to identify distinct community boundaries, and resulting in a lower modularity.</p>
+<hr>
+<h2 id="q21-meaning-of-homogeneity-and-completeness">Q21: Meaning of Homogeneity and Completeness </h2>
+<p><strong>Homogeneity</strong> (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi></mrow><annotation encoding="application/x-tex">h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span></span></span></span>) measures whether each detected community consists of members that all belong to the same circle. Formally:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>h</mi><mo>=</mo><mn>1</mn><mo>−</mo><mfrac><mrow><mi>H</mi><mo stretchy="false">(</mo><mi>C</mi><mo>∣</mo><mi>K</mi><mo stretchy="false">)</mo></mrow><mrow><mi>H</mi><mo stretchy="false">(</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">h = 1 - \frac{H(C \mid K)}{H(C)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.363em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0813em;">H</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mclose">)</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0813em;">H</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">K</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo stretchy="false">(</mo><mi>C</mi><mo>∣</mo><mi>K</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">H(C \mid K)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∣</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">K</span><span class="mclose">)</span></span></span></span> is the residual uncertainty about which circle a node belongs to, given that we already know its community assignment. If <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">h = 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>, every community is "pure" — all its members come from a single circle. If <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">h = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>, knowing a node's community tells us nothing about its circle. A negative <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi></mrow><annotation encoding="application/x-tex">h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span></span></span></span> would mean communities are even more mixed than the overall circle distribution, i.e., the algorithm actively mixes circles together rather than keeping them separate.</p>
+<p><strong>Completeness</strong> (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span></span></span></span>) measures whether all members of the same circle are assigned to the same community. Formally:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>c</mi><mo>=</mo><mn>1</mn><mo>−</mo><mfrac><mrow><mi>H</mi><mo stretchy="false">(</mo><mi>K</mi><mo>∣</mo><mi>C</mi><mo stretchy="false">)</mo></mrow><mrow><mi>H</mi><mo stretchy="false">(</mo><mi>K</mi><mo stretchy="false">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">c = 1 - \frac{H(K \mid C)}{H(K)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.363em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0813em;">H</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0715em;">K</span><span class="mclose">)</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0813em;">H</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0715em;">K</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo stretchy="false">(</mo><mi>K</mi><mo>∣</mo><mi>C</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">H(K \mid C)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0715em;">K</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∣</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mclose">)</span></span></span></span> is the residual uncertainty about which community a node belongs to, given its circle. If <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">c = 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>, every circle is fully captured by a single community — no circle is split across multiple communities. If <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">c = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>, knowing a node's circle tells us nothing about which community it lands in. A negative <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span></span></span></span> would mean circles are more fragmented across communities than a random assignment would produce.</p>
+<p>Together, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi></mrow><annotation encoding="application/x-tex">h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span></span></span></span> are analogous to <strong>precision and recall</strong> in information retrieval: homogeneity reflects the internal purity of detected communities (each community should not mix different circles), while completeness reflects how well the algorithm keeps each circle intact (all members of a circle should end up in the same community).</p>
+<hr>
+<h2 id="q22-homogeneity-and-completeness-for-the-3-personal-networks">Q22: Homogeneity and Completeness for the 3 Personal Networks </h2>
+<p>The Walktrap communities from Q20 are used. Only nodes that appear both in the graph and in the <code>.circles</code> file are included in the computation. Each node is assigned to its first-appearing circle (first-occurrence rule) to handle overlapping circles. All entropy values are computed using the natural logarithm (nats).</p>
+<table>
+<thead>
+<tr>
+<th>Ego Node</th>
+<th>Circles</th>
+<th>Nodes w/ label</th>
+<th>Communities</th>
+<th><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo stretchy="false">(</mo><mi>C</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">H(C)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mclose">)</span></span></span></span></th>
+<th><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo stretchy="false">(</mo><mi>K</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">H(K)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0715em;">K</span><span class="mclose">)</span></span></span></span></th>
+<th><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo stretchy="false">(</mo><mi>C</mi><mi mathvariant="normal">∣</mi><mi>K</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">H(C|K)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.0715em;">K</span><span class="mclose">)</span></span></span></span></th>
+<th><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo stretchy="false">(</mo><mi>K</mi><mi mathvariant="normal">∣</mi><mi>C</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">H(K|C)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0715em;">K</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mclose">)</span></span></span></span></th>
+<th><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi></mrow><annotation encoding="application/x-tex">h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span></span></span></span></th>
+<th><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span></span></span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>…108490</code></td>
+<td>3</td>
+<td>764 / 774</td>
+<td>3</td>
+<td>0.7735</td>
+<td>0.9249</td>
+<td>0.1632</td>
+<td>0.3146</td>
+<td><strong>0.789</strong></td>
+<td><strong>0.660</strong></td>
+</tr>
+<tr>
+<td><code>…145546</code></td>
+<td>31</td>
+<td>727 / 924</td>
+<td>9</td>
+<td>1.7719</td>
+<td>1.0964</td>
+<td>1.0633</td>
+<td>0.3877</td>
+<td><strong>0.400</strong></td>
+<td><strong>0.646</strong></td>
+</tr>
+<tr>
+<td><code>…806744</code></td>
+<td>3</td>
+<td>521 / 3,815</td>
+<td>18</td>
+<td>0.3667</td>
+<td>0.5350</td>
+<td>0.3617</td>
+<td>0.5300</td>
+<td><strong>0.014</strong></td>
+<td><strong>0.009</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="interpretation">Interpretation </h3>
+<p><strong>Ego node <code>…108490</code></strong> — <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>=</mo><mn>0.789</mn></mrow><annotation encoding="application/x-tex">h = 0.789</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.789</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><mn>0.660</mn></mrow><annotation encoding="application/x-tex">c = 0.660</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.660</span></span></span></span></p>
+<p>This network shows the strongest alignment between communities and circles. With 3 circles and exactly 3 Walktrap communities, the algorithm found the same number of groups as the ground truth. The high homogeneity (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>≈</mo><mn>0.789</mn></mrow><annotation encoding="application/x-tex">h \approx 0.789</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.789</span></span></span></span>) indicates that each detected community is largely pure — most members within a community share the same circle. The moderate completeness (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>≈</mo><mn>0.660</mn></mrow><annotation encoding="application/x-tex">c \approx 0.660</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4831em;"></span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.660</span></span></span></span>) shows that each circle is mostly captured within one community, although some cross-community spillover exists. This is the only network where communities substantially mirror real-world social circles.</p>
+<p><strong>Ego node <code>…145546</code></strong> — <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>=</mo><mn>0.400</mn></mrow><annotation encoding="application/x-tex">h = 0.400</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.400</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><mn>0.646</mn></mrow><annotation encoding="application/x-tex">c = 0.646</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.646</span></span></span></span></p>
+<p>There are 31 circles but only 9 communities. Because many circles are merged into the same community, each community inevitably contains members from multiple circles, inflating <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo stretchy="false">(</mo><mi>C</mi><mo>∣</mo><mi>K</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">H(C \mid K)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∣</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">K</span><span class="mclose">)</span></span></span></span> and suppressing homogeneity (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>≈</mo><mn>0.400</mn></mrow><annotation encoding="application/x-tex">h \approx 0.400</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.400</span></span></span></span>). Completeness (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>≈</mo><mn>0.646</mn></mrow><annotation encoding="application/x-tex">c \approx 0.646</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4831em;"></span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.646</span></span></span></span>) is more robust: many smaller circles happen to fall largely within one community even after merging, so the circle structure is partially preserved. The gap between <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi></mrow><annotation encoding="application/x-tex">h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span></span></span></span> of ≈ 0.25 is a signature of having more fine-grained ground-truth labels than detected communities — the communities are too coarse to be pure, but still manage to keep most circles roughly intact.</p>
+<p><strong>Ego node <code>…806744</code></strong> — <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>=</mo><mn>0.014</mn></mrow><annotation encoding="application/x-tex">h = 0.014</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.014</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><mn>0.009</mn></mrow><annotation encoding="application/x-tex">c = 0.009</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.009</span></span></span></span></p>
+<p>Both scores are near zero, indicating essentially no correspondence between Walktrap communities and ground-truth circles. Two factors explain this result. First, only 521 of 3,815 nodes (13.7%) have circle labels, so the labelled set covers a small and potentially unrepresentative slice of the network. Second, the Walktrap algorithm produced 18 communities, but two of them dominate (2,920 and 879 nodes), meaning the 521 labelled nodes covering just 3 circles are scattered across these two giant communities with no coherent alignment. The <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo stretchy="false">(</mo><mi>C</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">H(C)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mclose">)</span></span></span></span> value of 0.367 is relatively small, confirming that the circle distribution itself is highly unbalanced, further reducing the sensitivity of the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi></mrow><annotation encoding="application/x-tex">h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span></span></span></span> metrics.</p>
+<h3 id="are-there-negative-values">Are there negative values? </h3>
+<p>No negative values were observed. Negative <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi></mrow><annotation encoding="application/x-tex">h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span></span></span></span> or <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span></span></span></span> would require the conditional entropy to exceed the marginal entropy — i.e., knowing a node's community (or circle) would actively increase uncertainty about its circle (or community). This pathological case does not arise here because we compute <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>b</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">b_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> (the community size used in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo stretchy="false">(</mo><mi>K</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">H(K)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0715em;">K</span><span class="mclose">)</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo stretchy="false">(</mo><mi>C</mi><mo>∣</mo><mi>K</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">H(C \mid K)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∣</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">K</span><span class="mclose">)</span></span></span></span>) using only the labelled nodes, ensuring that all three quantities <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.109em;">N</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">a_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>b</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">b_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> refer to the same population and the entropy formulas remain mathematically consistent. In theory, negative values could arise if the algorithm systematically anti-correlates with ground-truth partitions, or if entropy estimates become unreliable due to an extremely small labelled subset. Neither condition holds for these three networks.</p>
+<hr>
+<h1 id="part-3--cora-dataset">Part 3 — Cora Dataset </h1>
+<h2 id="q23-graph-convolutional-network-gcn">Q23: Graph Convolutional Network (GCN) </h2>
+<h3 id="model-architecture">Model Architecture </h3>
+<p>We implement a flexible GCN following Kipf &amp; Welling (2017), where each layer performs the aggregation:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mi>H</mi><mrow><mo stretchy="false">(</mo><mi>l</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msup><mo>=</mo><mi>σ</mi><mtext> ⁣</mtext><mrow><mo fence="true">(</mo><msup><mover accent="true"><mi>D</mi><mo>~</mo></mover><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup><mover accent="true"><mi>A</mi><mo>~</mo></mover><msup><mover accent="true"><mi>D</mi><mo>~</mo></mover><mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup><msup><mi>H</mi><mrow><mo stretchy="false">(</mo><mi>l</mi><mo stretchy="false">)</mo></mrow></msup><msup><mi>W</mi><mrow><mo stretchy="false">(</mo><mi>l</mi><mo stretchy="false">)</mo></mrow></msup><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">H^{(l+1)} = \sigma\!\left(\tilde{D}^{-\frac{1}{2}}\tilde{A}\tilde{D}^{-\frac{1}{2}} H^{(l)} W^{(l)}\right)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.938em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0813em;">H</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.938em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.0197em;">l</span><span class="mbin mtight">+</span><span class="mord mtight">1</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.8em;vertical-align:-0.65em;"></span><span class="mord mathnormal" style="margin-right:0.0359em;">σ</span><span class="mspace" style="margin-right:-0.1667em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size2">(</span></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9202em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.0278em;">D</span></span><span style="top:-3.6023em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1944em;"><span class="mord">~</span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.004em;"><span style="top:-3.413em;margin-right:0.05em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight"><span class="mopen nulldelimiter sizing reset-size3 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8443em;"><span style="top:-2.656em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.2255em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line mtight" style="border-bottom-width:0.049em;"></span></span><span style="top:-3.384em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.344em;"><span></span></span></span></span></span><span class="mclose nulldelimiter sizing reset-size3 size6"></span></span></span></span></span></span></span></span></span></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9202em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">A</span></span><span style="top:-3.6023em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1111em;"><span class="mord">~</span></span></span></span></span></span></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9202em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.0278em;">D</span></span><span style="top:-3.6023em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1944em;"><span class="mord">~</span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.004em;"><span style="top:-3.413em;margin-right:0.05em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight"><span class="mopen nulldelimiter sizing reset-size3 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8443em;"><span style="top:-2.656em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.2255em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line mtight" style="border-bottom-width:0.049em;"></span></span><span style="top:-3.384em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.344em;"><span></span></span></span></span></span><span class="mclose nulldelimiter sizing reset-size3 size6"></span></span></span></span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0813em;">H</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.938em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.0197em;">l</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.1389em;">W</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.938em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.0197em;">l</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size2">)</span></span></span></span></span></span></span></p>
+<p>with <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mi>A</mi><mo>~</mo></mover><mo>=</mo><mi>A</mi><mo>+</mo><mi>I</mi></mrow><annotation encoding="application/x-tex">\tilde{A} = A + I</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9202em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9202em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">A</span></span><span style="top:-3.6023em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1111em;"><span class="mord">~</span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0785em;">I</span></span></span></span> the self-loop adjacency matrix and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mi>D</mi><mo>~</mo></mover></mrow><annotation encoding="application/x-tex">\tilde{D}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9202em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9202em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.0278em;">D</span></span><span style="top:-3.6023em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1944em;"><span class="mord">~</span></span></span></span></span></span></span></span></span></span> its diagonal degree matrix. The final layer uses log-softmax for multi-class classification, trained with negative log-likelihood loss on the 140 labelled seed nodes.</p>
+<h3 id="hyperparameter-search">Hyperparameter Search </h3>
+<p>We perform a grid search over 22 configurations, varying number of layers (2–4), hidden dimensions (16 / 64 / 128 / 256), dropout rate (0.3 / 0.5), learning rate (0.005 / 0.01), and weight decay (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mo>×</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>4</mn></mrow></msup></mrow><annotation encoding="application/x-tex">5\times10^{-4}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">5</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span></span> / <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>10</mn><mrow><mo>−</mo><mn>3</mn></mrow></msup></mrow><annotation encoding="application/x-tex">10^{-3}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span></span>). All runs use the Adam optimiser. Training runs for up to 500 epochs with early stopping (patience = 100) based on validation accuracy.</p>
+<table>
+<thead>
+<tr>
+<th>Architecture</th>
+<th>L</th>
+<th>Dropout</th>
+<th>LR</th>
+<th>WD</th>
+<th>Val Acc</th>
+<th>Test Acc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1433→16→7</td>
+<td>2</td>
+<td>0.5</td>
+<td>0.010</td>
+<td>5e-4</td>
+<td>0.7840</td>
+<td>0.8060</td>
+</tr>
+<tr>
+<td>1433→64→7</td>
+<td>2</td>
+<td>0.5</td>
+<td>0.010</td>
+<td>5e-4</td>
+<td>0.7920</td>
+<td>0.8090</td>
+</tr>
+<tr>
+<td>1433→128→7</td>
+<td>2</td>
+<td>0.5</td>
+<td>0.010</td>
+<td>5e-4</td>
+<td>0.7860</td>
+<td>0.8030</td>
+</tr>
+<tr>
+<td>1433→256→7</td>
+<td>2</td>
+<td>0.5</td>
+<td>0.010</td>
+<td>5e-4</td>
+<td>0.8060</td>
+<td>0.8170</td>
+</tr>
+<tr>
+<td>1433→64→7</td>
+<td>2</td>
+<td>0.3</td>
+<td>0.010</td>
+<td>5e-4</td>
+<td>0.7900</td>
+<td>0.7980</td>
+</tr>
+<tr>
+<td>1433→128→7</td>
+<td>2</td>
+<td>0.3</td>
+<td>0.010</td>
+<td>5e-4</td>
+<td>0.7860</td>
+<td>0.8050</td>
+</tr>
+<tr>
+<td>1433→64→7</td>
+<td>2</td>
+<td>0.5</td>
+<td>0.005</td>
+<td>5e-4</td>
+<td>0.7900</td>
+<td>0.7990</td>
+</tr>
+<tr>
+<td>1433→128→7</td>
+<td>2</td>
+<td>0.5</td>
+<td>0.005</td>
+<td>5e-4</td>
+<td>0.7940</td>
+<td>0.8060</td>
+</tr>
+<tr>
+<td>1433→64→7</td>
+<td>2</td>
+<td>0.5</td>
+<td>0.010</td>
+<td>1e-3</td>
+<td>0.7920</td>
+<td>0.8100</td>
+</tr>
+<tr>
+<td>1433→128→7</td>
+<td>2</td>
+<td>0.5</td>
+<td>0.010</td>
+<td>1e-3</td>
+<td>0.7900</td>
+<td>0.8080</td>
+</tr>
+<tr>
+<td>1433→64→32→7</td>
+<td>3</td>
+<td>0.5</td>
+<td>0.010</td>
+<td>5e-4</td>
+<td>0.7880</td>
+<td>0.8050</td>
+</tr>
+<tr>
+<td>1433→64→64→7</td>
+<td>3</td>
+<td>0.5</td>
+<td>0.010</td>
+<td>5e-4</td>
+<td>0.8000</td>
+<td>0.8120</td>
+</tr>
+<tr>
+<td>1433→128→64→7</td>
+<td>3</td>
+<td>0.5</td>
+<td>0.010</td>
+<td>5e-4</td>
+<td>0.7940</td>
+<td>0.8110</td>
+</tr>
+<tr>
+<td>1433→128→64→7</td>
+<td>3</td>
+<td>0.3</td>
+<td>0.010</td>
+<td>5e-4</td>
+<td>0.8040</td>
+<td>0.8100</td>
+</tr>
+<tr>
+<td>1433→64→64→7</td>
+<td>3</td>
+<td>0.3</td>
+<td>0.010</td>
+<td>5e-4</td>
+<td>0.7920</td>
+<td>0.7850</td>
+</tr>
+<tr>
+<td>1433→64→64→7</td>
+<td>3</td>
+<td>0.5</td>
+<td>0.005</td>
+<td>5e-4</td>
+<td>0.8120</td>
+<td>0.8160</td>
+</tr>
+<tr>
+<td>1433→128→64→7</td>
+<td>3</td>
+<td>0.5</td>
+<td>0.005</td>
+<td>5e-4</td>
+<td>0.7940</td>
+<td>0.8200</td>
+</tr>
+<tr>
+<td>1433→64→64→7</td>
+<td>3</td>
+<td>0.5</td>
+<td>0.010</td>
+<td>1e-3</td>
+<td>0.8020</td>
+<td>0.8110</td>
+</tr>
+<tr>
+<td>1433→64→64→32→7</td>
+<td>4</td>
+<td>0.5</td>
+<td>0.010</td>
+<td>5e-4</td>
+<td>0.7900</td>
+<td>0.8210</td>
+</tr>
+<tr>
+<td>1433→64→64→64→7</td>
+<td>4</td>
+<td>0.5</td>
+<td>0.010</td>
+<td>5e-4</td>
+<td>0.7880</td>
+<td>0.8150</td>
+</tr>
+<tr>
+<td><strong>1433→128→64→32→7</strong></td>
+<td><strong>4</strong></td>
+<td><strong>0.5</strong></td>
+<td><strong>0.010</strong></td>
+<td><strong>5e-4</strong></td>
+<td><strong>0.8180</strong></td>
+<td><strong>0.8180</strong></td>
+</tr>
+<tr>
+<td>1433→64→64→32→7</td>
+<td>4</td>
+<td>0.3</td>
+<td>0.010</td>
+<td>5e-4</td>
+<td>0.8020</td>
+<td>0.8070</td>
+</tr>
+</tbody>
+</table>
+<h3 id="best-configuration">Best Configuration </h3>
+<p>The best model is a <strong>4-layer GCN</strong> (three hidden layers: 128 → 64 → 32) with dropout 0.5 and learning rate 0.01:</p>
+<ul>
+<li><strong>Validation accuracy: 81.80%</strong></li>
+<li><strong>Test accuracy: 81.80%</strong></li>
+</ul>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Architecture     : 1433 → 128 → 64 → 32 → 7
+Dropout          : 0.5
+Learning rate    : 0.01
+Weight decay     : 5 × 10⁻⁴
+Optimiser        : Adam
+Number of layers : 4 (including output layer)
+</code></pre><p>The bottleneck architecture (128 → 64 → 32) provides a hierarchical feature compression across 3-hop neighbourhoods. Each additional GCN layer aggregates information from one further hop, so a 4-layer network captures longer-range citation dependencies that a 2-layer network cannot. The decreasing hidden dimensions regularise the model by forcing it to compress representations progressively, which helps generalise from the small training set of 140 nodes.</p>
+<h3 id="per-class-classification-report-best-model">Per-class Classification Report (Best Model) </h3>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Precision</th>
+<th>Recall</th>
+<th>F1</th>
+<th>Support</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 — Case Based</td>
+<td>0.7561</td>
+<td>0.7154</td>
+<td>0.7352</td>
+<td>130</td>
+</tr>
+<tr>
+<td>1 — Genetic Algorithms</td>
+<td>0.6810</td>
+<td>0.8681</td>
+<td>0.7633</td>
+<td>91</td>
+</tr>
+<tr>
+<td>2 — Neural Networks</td>
+<td>0.8944</td>
+<td>0.8819</td>
+<td>0.8881</td>
+<td>144</td>
+</tr>
+<tr>
+<td>3 — Probabilistic Methods</td>
+<td>0.8904</td>
+<td>0.8150</td>
+<td>0.8511</td>
+<td>319</td>
+</tr>
+<tr>
+<td>4 — Reinforcement Learning</td>
+<td>0.8400</td>
+<td>0.8456</td>
+<td>0.8428</td>
+<td>149</td>
+</tr>
+<tr>
+<td>5 — Rule Learning</td>
+<td>0.7879</td>
+<td>0.7573</td>
+<td>0.7723</td>
+<td>103</td>
+</tr>
+<tr>
+<td>6 — Theory</td>
+<td>0.7051</td>
+<td>0.8594</td>
+<td>0.7746</td>
+<td>64</td>
+</tr>
+<tr>
+<td><strong>Macro avg</strong></td>
+<td><strong>0.7936</strong></td>
+<td><strong>0.8204</strong></td>
+<td><strong>0.8039</strong></td>
+<td><strong>1000</strong></td>
+</tr>
+<tr>
+<td><strong>Weighted avg</strong></td>
+<td><strong>0.8245</strong></td>
+<td><strong>0.8180</strong></td>
+<td><strong>0.8191</strong></td>
+<td><strong>1000</strong></td>
+</tr>
+<tr>
+<td><strong>Overall accuracy</strong></td>
+<td></td>
+<td></td>
+<td><strong>0.8180</strong></td>
+<td><strong>1000</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Neural Networks achieves the highest F1 (0.888), likely because its papers form a dense and well-separated citation cluster with distinctive vocabulary. Genetic Algorithms has the lowest precision (0.681), indicating that its walks spread broadly and claim nodes from adjacent classes. Case Based and Rule Learning have the next lowest F1 scores, suggesting their citation patterns and text features overlap more with other classes.</p>
+<hr>
+<h2 id="q24-node2vec--classifier">Q24: Node2Vec + Classifier </h2>
+<h3 id="how-node2vec-finds-node-features">How Node2Vec Finds Node Features </h3>
+<p>Node2Vec learns low-dimensional node embeddings by simulating biased random walks on the graph and training a skip-gram model (Word2Vec) on the resulting walk sequences. At each step of a walk currently at node <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0359em;">v</span></span></span></span> (having arrived from <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span></span></span></span>), the transition probability to the next node <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> is:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>π</mi><mrow><mi>v</mi><mi>x</mi></mrow></msub><mo>=</mo><msub><mi>α</mi><mrow><mi>p</mi><mi>q</mi></mrow></msub><mo stretchy="false">(</mo><mi>t</mi><mo separator="true">,</mo><mi>x</mi><mo stretchy="false">)</mo><mo>⋅</mo><msub><mi>w</mi><mrow><mi>v</mi><mi>x</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\pi_{vx} = \alpha_{pq}(t, x) \cdot w_{vx}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0359em;">π</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0359em;">v</span><span class="mord mathnormal mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0361em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0359em;">pq</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0269em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0269em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0359em;">v</span><span class="mord mathnormal mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+<p>where <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>α</mi><mrow><mi>p</mi><mi>q</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\alpha_{pq}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7167em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0359em;">pq</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span> depends on the distance <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mrow><mi>t</mi><mi>x</mi></mrow></msub></mrow><annotation encoding="application/x-tex">d_{tx}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> between <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> and the previous node <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span></span></span></span>:</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>α</mi><mrow><mi>p</mi><mi>q</mi></mrow></msub><mo stretchy="false">(</mo><mi>t</mi><mo separator="true">,</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mo fence="true">{</mo><mtable rowspacing="0.36em" columnalign="left left" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>1</mn><mi mathvariant="normal">/</mi><mi>p</mi></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mtext>if&nbsp;</mtext><msub><mi>d</mi><mrow><mi>t</mi><mi>x</mi></mrow></msub><mo>=</mo><mn>0</mn><mtext>&nbsp;(return&nbsp;to&nbsp;</mtext><mi>t</mi><mtext>)</mtext></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>1</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mtext>if&nbsp;</mtext><msub><mi>d</mi><mrow><mi>t</mi><mi>x</mi></mrow></msub><mo>=</mo><mn>1</mn><mtext>&nbsp;(stay&nbsp;local)</mtext></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>1</mn><mi mathvariant="normal">/</mi><mi>q</mi></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mtext>if&nbsp;</mtext><msub><mi>d</mi><mrow><mi>t</mi><mi>x</mi></mrow></msub><mo>=</mo><mn>2</mn><mtext>&nbsp;(explore&nbsp;further)</mtext></mrow></mstyle></mtd></mtr></mtable></mrow></mrow><annotation encoding="application/x-tex">\alpha_{pq}(t, x) = \begin{cases} 1/p &amp; \text{if } d_{tx} = 0 \text{ (return to } t\text{)} \\ 1 &amp; \text{if } d_{tx} = 1 \text{ (stay local)} \\ 1/q &amp; \text{if } d_{tx} = 2 \text{ (explore further)} \end{cases}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0361em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0037em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0359em;">pq</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:4.32em;vertical-align:-1.91em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.35em;"><span style="top:-2.2em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎩</span></span></span><span style="top:-2.192em;"><span class="pstrut" style="height:3.15em;"></span><span style="height:0.316em;width:0.8889em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.8889em" height="0.316em" style="width:0.8889em" viewBox="0 0 888.89 316" preserveAspectRatio="xMinYMin"><path d="M384 0 H504 V316 H384z M384 0 H504 V316 H384z"></path></svg></span></span><span style="top:-3.15em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎨</span></span></span><span style="top:-4.292em;"><span class="pstrut" style="height:3.15em;"></span><span style="height:0.316em;width:0.8889em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.8889em" height="0.316em" style="width:0.8889em" viewBox="0 0 888.89 316" preserveAspectRatio="xMinYMin"><path d="M384 0 H504 V316 H384z M384 0 H504 V316 H384z"></path></svg></span></span><span style="top:-4.6em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎧</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.85em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.41em;"><span style="top:-4.41em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord">1/</span><span class="mord mathnormal">p</span></span></span><span style="top:-2.97em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord">1</span></span></span><span style="top:-1.53em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord">1/</span><span class="mord mathnormal" style="margin-right:0.0359em;">q</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.91em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:1em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.41em;"><span style="top:-4.41em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord text"><span class="mord">if&nbsp;</span></span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord">0</span><span class="mord text"><span class="mord">&nbsp;(return&nbsp;to&nbsp;</span></span><span class="mord mathnormal">t</span><span class="mord text"><span class="mord">)</span></span></span></span><span style="top:-2.97em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord text"><span class="mord">if&nbsp;</span></span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord">1</span><span class="mord text"><span class="mord">&nbsp;(stay&nbsp;local)</span></span></span></span><span style="top:-1.53em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord text"><span class="mord">if&nbsp;</span></span><span class="mord"><span class="mord mathnormal">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord">2</span><span class="mord text"><span class="mord">&nbsp;(explore&nbsp;further)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.91em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<ul>
+<li><strong>Return parameter <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span></span></span></span></strong>: small <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span></span></span></span> encourages revisiting recent nodes (DFS-like, captures structural roles).</li>
+<li><strong>In-out parameter <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi></mrow><annotation encoding="application/x-tex">q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0359em;">q</span></span></span></span></strong>: small <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi></mrow><annotation encoding="application/x-tex">q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0359em;">q</span></span></span></span> favours local exploration (BFS-like, captures community membership).</li>
+</ul>
+<p>In our implementation we use <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mi>q</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">p = q = 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0359em;">q</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> (unbiased DeepWalk-style walk), embedding dimension 128, walk length 80, 10 walks per node, and window size 10. The skip-gram model predicts surrounding nodes in a walk, so nodes that frequently co-occur in walks receive similar embedding vectors.</p>
+<h3 id="classification-results">Classification Results </h3>
+<p>We evaluate three classifiers (Random Forest, SVM with RBF kernel, MLP) on three feature sets. SVM and MLP inputs are standardised with zero mean and unit variance.</p>
+<table>
+<thead>
+<tr>
+<th>Feature Set</th>
+<th>Classifier</th>
+<th>Accuracy</th>
+<th>Macro F1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Node2Vec only (128-d)</td>
+<td>Random Forest</td>
+<td>70.50%</td>
+<td>0.6921</td>
+</tr>
+<tr>
+<td>Node2Vec only (128-d)</td>
+<td><strong>SVM (RBF)</strong></td>
+<td><strong>74.50%</strong></td>
+<td><strong>0.7371</strong></td>
+</tr>
+<tr>
+<td>Node2Vec only (128-d)</td>
+<td>MLP</td>
+<td>70.40%</td>
+<td>0.7017</td>
+</tr>
+<tr>
+<td>Text only (1433-d)</td>
+<td>Random Forest</td>
+<td>57.50%</td>
+<td>0.5656</td>
+</tr>
+<tr>
+<td>Text only (1433-d)</td>
+<td>SVM (RBF)</td>
+<td>45.40%</td>
+<td>0.4580</td>
+</tr>
+<tr>
+<td>Text only (1433-d)</td>
+<td>MLP</td>
+<td>35.00%</td>
+<td>0.3551</td>
+</tr>
+<tr>
+<td><strong>Node2Vec + Text (1561-d)</strong></td>
+<td><strong>Random Forest</strong></td>
+<td><strong>72.90%</strong></td>
+<td><strong>0.7201</strong></td>
+</tr>
+<tr>
+<td>Node2Vec + Text (1561-d)</td>
+<td>SVM (RBF)</td>
+<td>67.80%</td>
+<td>0.6904</td>
+</tr>
+<tr>
+<td>Node2Vec + Text (1561-d)</td>
+<td>MLP</td>
+<td>49.60%</td>
+<td>0.4868</td>
+</tr>
+</tbody>
+</table>
+<h3 id="which-feature-set-outperforms">Which Feature Set Outperforms? </h3>
+<p><strong>Node2Vec outperforms text-only features across all three classifiers.</strong> The best single-feature accuracy is:</p>
+<ul>
+<li>Node2Vec only: <strong>74.50%</strong> (SVM)</li>
+<li>Text only: <strong>57.50%</strong> (Random Forest)</li>
+</ul>
+<h3 id="why-does-node2vec-outperform-text-features">Why Does Node2Vec Outperform Text Features? </h3>
+<p>The key reason is the extreme mismatch between training set size and feature dimensionality. With only <strong>140 labelled nodes</strong> and <strong>1433-dimensional sparse binary features</strong>, all three classifiers suffer from the curse of dimensionality:</p>
+<ul>
+<li><strong>MLP</strong> with 1433-dimensional input and only 140 training samples is severely under-constrained, achieving only 35% accuracy — barely above a naive majority-class baseline. This is a textbook case of overfitting due to insufficient data.</li>
+<li><strong>SVM</strong> cannot reliably estimate a large-margin decision boundary in 1433 dimensions from 140 examples, falling to 45.4%.</li>
+<li><strong>Random Forest</strong> is more robust to high dimensions but still limited to 57.5% because the 1433-dimensional binary bag-of-words vectors are extremely sparse, providing weak signal per feature.</li>
+</ul>
+<p>Node2Vec embeddings (128-d, dense, continuous) are far better conditioned for small-sample learning. The random walks compress graph structure into a compact representation where citation proximity — a strong proxy for topic similarity — is encoded geometrically, providing an inductive bias well-aligned with the classification task. All 2708 nodes participate in walk generation regardless of label availability, so the 128-d embeddings capture global graph structure using the full graph, not just the 140 labelled nodes.</p>
+<h3 id="best-classification-accuracy">Best Classification Accuracy </h3>
+<p>The best result is <strong>74.50%</strong> using Node2Vec only with an SVM (RBF) classifier. Combining Node2Vec with text features (Node2Vec + Text, Random Forest) yields 72.90%, which is actually lower than Node2Vec alone. This confirms that in the low-data regime, the high-dimensional sparse text features add more noise than discriminative signal, diluting the informative 128-d Node2Vec embedding and hurting the classifier.</p>
+<p><strong>Best classification accuracy: 74.50%</strong> (Node2Vec only, SVM with RBF kernel).</p>
+<hr>
+<h2 id="q25-personalized-pagerank">Q25: Personalized PageRank </h2>
+<h3 id="method">Method </h3>
+<p>We run personalized PageRank as a biased random walk on the <strong>Giant Connected Component (GCC)</strong> of the Cora citation graph (2,485 nodes, 5,069 edges after converting to undirected). 18 of the 140 training seed nodes fall outside the GCC, leaving 122 GCC seed nodes. Similarly, 85 of the 1,000 test nodes are outside the GCC; we evaluate on the remaining 915 GCC test nodes. For each of the 7 classes, we launch 1,000 random walks from each seed node of that class (122,000 total walks). Each walk has length 100 steps.</p>
+<p>At every step from the current node <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">x_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> with neighbours <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><msub><mi>x</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">x_1, \ldots, x_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.0315em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>:</p>
+<ul>
+<li>With probability <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span>: <strong>teleport</strong> to a uniformly random seed node of the current class.</li>
+<li>With probability <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>−</mo><mi>α</mi></mrow><annotation encoding="application/x-tex">1 - \alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span>: <strong>transition</strong> to neighbour <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">x_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> with probability proportional to the softmax of dot-product similarity between text features:</li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>p</mi><mi>i</mi></msub><mo>=</mo><mfrac><mrow><mi>exp</mi><mo>⁡</mo><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo>⋅</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mrow><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><mi>exp</mi><mo>⁡</mo><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo>⋅</mo><msub><mi>x</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">p_i = \frac{\exp(x_0 \cdot x_i)}{\sum_{j=1}^{k} \exp(x_0 \cdot x_j)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.7418em;vertical-align:-1.3148em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.121em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.989em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0572em;">j</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0315em;">k</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4358em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">exp</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.0572em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mop">exp</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.3148em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<p>We maintain a class-wise visit counter for every node. The predicted label for an unlabelled node is the class whose walks visited it most often. Nodes that receive zero visits across all classes are assigned the majority class of the GCC training set. We vary <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>∈</mo><mo stretchy="false">{</mo><mn>0</mn><mo separator="true">,</mo><mn>0.1</mn><mo separator="true">,</mo><mn>0.2</mn><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\alpha \in \{0, 0.1, 0.2\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">0.1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">0.2</span><span class="mclose">}</span></span></span></span>.</p>
+<h3 id="results">Results </h3>
+<table>
+<thead>
+<tr>
+<th><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span></th>
+<th>Accuracy</th>
+<th>Macro F1</th>
+<th>Weighted F1</th>
+<th>Zero-visit nodes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0.0</strong></td>
+<td><strong>69.40%</strong></td>
+<td><strong>0.6825</strong></td>
+<td><strong>0.6936</strong></td>
+<td>23</td>
+</tr>
+<tr>
+<td>0.1</td>
+<td>67.32%</td>
+<td>0.6642</td>
+<td>0.6712</td>
+<td>38</td>
+</tr>
+<tr>
+<td>0.2</td>
+<td>66.12%</td>
+<td>0.6563</td>
+<td>0.6562</td>
+<td>51</td>
+</tr>
+</tbody>
+</table>
+<h3 id="per-class-results">Per-class Results </h3>
+<p><strong>α = 0.0</strong></p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Precision</th>
+<th>Recall</th>
+<th>F1</th>
+<th>Support</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 — Case Based</td>
+<td>0.5682</td>
+<td>0.5906</td>
+<td>0.5792</td>
+<td>127</td>
+</tr>
+<tr>
+<td>1 — Genetic Algorithms</td>
+<td>0.5342</td>
+<td>0.8764</td>
+<td>0.6638</td>
+<td>89</td>
+</tr>
+<tr>
+<td>2 — Neural Networks</td>
+<td>0.7688</td>
+<td>0.8723</td>
+<td>0.8173</td>
+<td>141</td>
+</tr>
+<tr>
+<td>3 — Probabilistic Methods</td>
+<td>0.8571</td>
+<td>0.5512</td>
+<td>0.6710</td>
+<td>283</td>
+</tr>
+<tr>
+<td>4 — Reinforcement Learning</td>
+<td>0.7444</td>
+<td>0.7615</td>
+<td>0.7529</td>
+<td>130</td>
+</tr>
+<tr>
+<td>5 — Rule Learning</td>
+<td>0.7353</td>
+<td>0.7576</td>
+<td>0.7463</td>
+<td>99</td>
+</tr>
+<tr>
+<td>6 — Theory</td>
+<td>0.4833</td>
+<td>0.6304</td>
+<td>0.5472</td>
+<td>46</td>
+</tr>
+<tr>
+<td><strong>Weighted avg</strong></td>
+<td><strong>0.7240</strong></td>
+<td><strong>0.6940</strong></td>
+<td><strong>0.6936</strong></td>
+<td><strong>915</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>α = 0.1</strong></p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Precision</th>
+<th>Recall</th>
+<th>F1</th>
+<th>Support</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 — Case Based</td>
+<td>0.5429</td>
+<td>0.5984</td>
+<td>0.5693</td>
+<td>127</td>
+</tr>
+<tr>
+<td>1 — Genetic Algorithms</td>
+<td>0.5524</td>
+<td>0.8876</td>
+<td>0.6810</td>
+<td>89</td>
+</tr>
+<tr>
+<td>2 — Neural Networks</td>
+<td>0.6872</td>
+<td>0.8723</td>
+<td>0.7688</td>
+<td>141</td>
+</tr>
+<tr>
+<td>3 — Probabilistic Methods</td>
+<td>0.8868</td>
+<td>0.4982</td>
+<td>0.6380</td>
+<td>283</td>
+</tr>
+<tr>
+<td>4 — Reinforcement Learning</td>
+<td>0.7348</td>
+<td>0.7462</td>
+<td>0.7405</td>
+<td>130</td>
+</tr>
+<tr>
+<td>5 — Rule Learning</td>
+<td>0.7447</td>
+<td>0.7071</td>
+<td>0.7254</td>
+<td>99</td>
+</tr>
+<tr>
+<td>6 — Theory</td>
+<td>0.4412</td>
+<td>0.6522</td>
+<td>0.5263</td>
+<td>46</td>
+</tr>
+<tr>
+<td><strong>Weighted avg</strong></td>
+<td><strong>0.7164</strong></td>
+<td><strong>0.6732</strong></td>
+<td><strong>0.6712</strong></td>
+<td><strong>915</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>α = 0.2</strong></p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Precision</th>
+<th>Recall</th>
+<th>F1</th>
+<th>Support</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 — Case Based</td>
+<td>0.5748</td>
+<td>0.5748</td>
+<td>0.5748</td>
+<td>127</td>
+</tr>
+<tr>
+<td>1 — Genetic Algorithms</td>
+<td>0.5563</td>
+<td>0.8876</td>
+<td>0.6840</td>
+<td>89</td>
+</tr>
+<tr>
+<td>2 — Neural Networks</td>
+<td>0.6294</td>
+<td>0.8794</td>
+<td>0.7337</td>
+<td>141</td>
+</tr>
+<tr>
+<td>3 — Probabilistic Methods</td>
+<td>0.8627</td>
+<td>0.4664</td>
+<td>0.6055</td>
+<td>283</td>
+</tr>
+<tr>
+<td>4 — Reinforcement Learning</td>
+<td>0.7480</td>
+<td>0.7308</td>
+<td>0.7393</td>
+<td>130</td>
+</tr>
+<tr>
+<td>5 — Rule Learning</td>
+<td>0.7216</td>
+<td>0.7071</td>
+<td>0.7143</td>
+<td>99</td>
+</tr>
+<tr>
+<td>6 — Theory</td>
+<td>0.4444</td>
+<td>0.6957</td>
+<td>0.5424</td>
+<td>46</td>
+</tr>
+<tr>
+<td><strong>Weighted avg</strong></td>
+<td><strong>0.7044</strong></td>
+<td><strong>0.6612</strong></td>
+<td><strong>0.6562</strong></td>
+<td><strong>915</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="interpretation-1">Interpretation </h3>
+<p><strong>Effect of teleportation probability <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span>:</strong><br>
+Accuracy decreases monotonically as <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span> increases: 69.40% → 67.32% → 66.12%. The number of zero-visit test nodes also increases with <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span> (23 → 38 → 51). Higher <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span> forces walks to return to seed nodes more frequently after each step, which restricts the walk to the local neighbourhood of the seeds rather than propagating label information broadly through the graph. With <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\alpha = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>, the walk propagates freely through content-similarity-biased transitions, visiting a wider portion of the graph and classifying more test nodes correctly. This suggests that for Cora, the text-similarity-based transition probabilities alone provide sufficient directional signal for label propagation without requiring artificial teleportation to anchor the walk.</p>
+<p><strong>Class-level observations:</strong></p>
+<ul>
+<li><strong>Neural Networks</strong> (class 2) is the most accurately classified class across all <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span></span></span></span> values (recall &gt; 87%), reflecting a dense and topically coherent citation cluster whose text features strongly guide walks toward it.</li>
+<li><strong>Probabilistic Methods</strong> (class 3) shows high precision but very low recall (55.1% at <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\alpha=0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>, declining to 46.6% at <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>=</mo><mn>0.2</mn></mrow><annotation encoding="application/x-tex">\alpha=0.2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.2</span></span></span></span>). As the largest class (283 test nodes), its nodes are spread across a large graph region; walks from its 18 seeds are too sparse to cover all its test nodes, so many are claimed by neighbouring classes instead.</li>
+<li><strong>Theory</strong> (class 6) consistently scores lowest in F1 (0.547 at <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\alpha=0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>) due to having only 10 seed nodes in the GCC — half of other classes — generating fewer total walk visits and therefore a weaker label signal.</li>
+<li><strong>Genetic Algorithms</strong> (class 1) achieves high recall (87–89%) but low precision (~54%), indicating its walks spread broadly and capture most true positives while also incorrectly claiming nodes from adjacent classes.</li>
+</ul>
+<h3 id="comparison-of-all-three-methods">Comparison of All Three Methods </h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Test Accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GCN (4-layer, best config)</strong></td>
+<td><strong>81.80%</strong></td>
+</tr>
+<tr>
+<td>Node2Vec only, SVM (RBF)</td>
+<td>74.50%</td>
+</tr>
+<tr>
+<td>Node2Vec + Text, Random Forest</td>
+<td>72.90%</td>
+</tr>
+<tr>
+<td>Personalized PageRank (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\alpha=0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>)</td>
+<td>69.40%</td>
+</tr>
+<tr>
+<td>Text only, Random Forest</td>
+<td>57.50%</td>
+</tr>
+</tbody>
+</table>
+<p>GCN achieves the highest accuracy because it jointly leverages both graph structure and text features through end-to-end differentiable message passing, directly supervised by the 140 labelled nodes. Node2Vec + classifier separates feature learning from classification and cannot propagate label information through the graph at test time, but its compact structural embedding still outperforms raw text features in the low-data regime. Personalized PageRank requires no model training but relies entirely on graph topology and text similarity for propagation, making it the most interpretable method despite its lower accuracy. Text-only classifiers perform worst due to the curse of dimensionality: 1433-dimensional sparse features are too high-dimensional to be learned reliably from only 140 labelled examples.</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
