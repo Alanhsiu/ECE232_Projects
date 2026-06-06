@@ -1,0 +1,3 @@
+MST,Total cost,#edges,Expected (N-1),Edge-set size,Hub,Hub degree,Jaccard
+Time-MST,"269,084.5 s",2648,2648,2648,Census Tract 408703,6,0.0009
+Reliability-MST,422.9118 CV,2648,2648,2648,Census Tract 670328,91,0.0009

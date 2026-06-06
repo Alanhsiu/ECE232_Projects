@@ -1,0 +1,4 @@
+Month,#nodes,#edges,mean_CV,rel-MST cost (CV),#crit-fragile edges,ML PoR,ML PTgain
+October,2652,1052236,0.3009,415.6341,20,0.0638,-0.0693
+November,2651,991353,0.3061,423.6357,20,0.0065,-0.0078
+December,2649,1003858,0.3108,422.9118,20,0.0305,0.021

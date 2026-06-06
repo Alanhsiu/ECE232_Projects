@@ -1,0 +1,5 @@
+Strategy,avg_T on targeted pairs (s),avg_PT on targeted pairs (s),Δ avg_PT vs baseline (s),Δ avg_PT vs baseline (%)
+Baseline,7478.09,8887.03,0.0,0.0
+S7 (reliability),4912.88,5723.35,-3163.7,-35.6
+S4 (time),7478.09,8887.03,0.0,0.0
+S6 (betweenness),7478.09,8887.03,0.0,0.0

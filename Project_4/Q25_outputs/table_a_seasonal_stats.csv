@@ -1,0 +1,4 @@
+Month,#nodes,#edges,mean_mu (s),median_speed (mph),mean_CV,median_CV,90pct_CV
+October,2652,1052236,1593.7,16.91,0.3009,0.2846,0.401
+November,2651,991353,1512.5,17.21,0.3061,0.2894,0.41
+December,2649,1003858,1496.8,17.26,0.3108,0.2927,0.4201
